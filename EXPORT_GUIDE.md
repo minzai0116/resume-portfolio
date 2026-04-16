@@ -1,0 +1,56 @@
+# 이력서/포트폴리오 Export Guide
+
+생성된 파일:
+
+- `resume_general_ml.html`
+- `portfolio_general_ml.html`
+- `resume_nexon_game_data_analyst.html`
+- `portfolio_nexon_game_data_analyst.html`
+- `TAILORING_GUIDE.md`
+
+## 1. 어떤 파일을 기본으로 쓰면 되는지
+
+- 여러 회사에 공통으로 쓸 기본본은 `resume_general_ml.html`, `portfolio_general_ml.html`입니다.
+- 넥슨에 바로 제출할 버전은 `resume_nexon_game_data_analyst.html`, `portfolio_nexon_game_data_analyst.html`입니다.
+- 회사별로 조금씩 바꿀 때는 `TAILORING_GUIDE.md`를 참고하면 됩니다.
+
+## 2. 먼저 수정할 항목
+
+아래 placeholder를 실제 값으로 바꿔주세요.
+
+- `[TODO] 제출용 이메일 입력`
+- `[TODO] 제출용 연락처 입력`
+- `[TODO] 학교명 / 전공 / 재학 및 졸업(예정) 시기 입력`
+- `[TODO] 실제 진행 기간 입력`
+- `[TODO] 실제 기준으로 입력 권장`
+
+## 3. PDF로 저장하는 방법
+
+1. Finder에서 원하는 html 파일을 엽니다.
+2. Safari 또는 Chrome에서 파일이 열리면 `파일 -> 프린트`로 이동합니다.
+3. 프린트 대화상자에서 `PDF로 저장`을 선택합니다.
+4. 파일명은 제출 규칙에 맞게 변경합니다.
+
+예시:
+
+- `김민재_이력서.pdf`
+- `김민재_포트폴리오.pdf`
+
+## 4. 추천 파일명
+
+지원처에 별도 규칙이 없으면 아래처럼 정리하는 것을 추천합니다.
+
+- 범용 제출본
+  - `김민재_이력서.pdf`
+  - `김민재_포트폴리오.pdf`
+- `김민재_넥슨_게임데이터분석가_이력서.pdf`
+- `김민재_넥슨_게임데이터분석가_포트폴리오.pdf`
+- `김민재_당근_이력서.pdf`
+- `김민재_당근_포트폴리오.pdf`
+
+## 5. 수정 방향 메모
+
+- 이력서는 `1장` 기준으로 설계했습니다.
+- 포트폴리오는 `6페이지` 기준으로 설계했습니다.
+- 자료 가이드에 맞춰 `역량 중심`, `프로젝트 역할 명시`, `숫자 성과 강조` 방향으로 작성했습니다.
+- 부스트캠프 표기는 `네이버 커넥트재단 부스트캠프 AI Tech 8기` 기준으로 맞췄습니다.

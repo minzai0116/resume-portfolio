@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>김민재_넥슨_게임데이터분석가_포트폴리오</title>
+  <style>
+    :root {
+      --bg: #eef2f7;
+      --page: #ffffff;
+      --text: #15202b;
+      --muted: #5f6d7c;
+      --line: #d8dee8;
+      --accent: #123d68;
+      --accent-soft: #e9f0f6;
+      --chip: #f4f7fb;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Noto Sans KR", sans-serif;
+      line-height: 1.55;
+    }
+
+    .page {
+      width: 210mm;
+      min-height: 297mm;
+      margin: 12mm auto;
+      padding: 14mm 15mm;
+      background: var(--page);
+      box-shadow: 0 8px 30px rgba(20, 33, 48, 0.08);
+      page-break-after: always;
+      position: relative;
+    }
+
+    .page:last-child { page-break-after: auto; }
+
+    h1, h2, h3, p { margin: 0; }
+
+    .cover {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      gap: 12mm;
+    }
+
+    .eyebrow {
+      font-size: 12px;
+      color: var(--accent);
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+
+    .title {
+      margin-top: 8mm;
+      font-size: 34px;
+      line-height: 1.18;
+      letter-spacing: -0.04em;
+    }
+
+    .subtitle {
+      margin-top: 5mm;
+      max-width: 150mm;
+      font-size: 14px;
+      color: var(--muted);
+    }
+
+    .meta-block {
+      margin-top: 14mm;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 5mm;
+    }
+
+    .meta-card,
+    .card {
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 5mm;
+      background: #fff;
+    }
+
+    .meta-card h3,
+    .card h3 {
+      font-size: 12px;
+      color: var(--accent);
+      margin-bottom: 2mm;
+    }
+
+    .meta-card p,
+    .card p,
+    .card li {
+      font-size: 11px;
+    }
+
+    .card ul {
+      margin: 0;
+      padding-left: 4mm;
+    }
+
+    .section-title {
+      font-size: 20px;
+      line-height: 1.25;
+      letter-spacing: -0.03em;
+      margin-bottom: 4mm;
+    }
+
+    .section-subtitle {
+      font-size: 12px;
+      color: var(--muted);
+      margin-bottom: 7mm;
+    }
+
+    .grid-2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 5mm;
+    }
+
+    .stack {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2mm;
+      margin-top: 3mm;
+    }
+
+    .chip {
+      padding: 1.4mm 2.6mm;
+      border-radius: 999px;
+      background: var(--chip);
+      border: 1px solid var(--line);
+      font-size: 10px;
+      color: var(--text);
+    }
+    .cover-summary {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 4mm;
+      margin-top: auto;
+    }
+
+    .cover-summary .summary-item {
+      border-top: 2px solid var(--accent);
+      padding-top: 3mm;
+    }
+
+    .cover-summary .label {
+      font-size: 10px;
+      color: var(--accent);
+      font-weight: 800;
+      margin-bottom: 1.5mm;
+      letter-spacing: 0.01em;
+    }
+
+    .cover-summary p {
+      font-size: 10.5px;
+      color: var(--muted);
+    }
+
+    .project-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: end;
+      gap: 4mm;
+      margin-bottom: 5mm;
+      padding-bottom: 4mm;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .project-header h2 {
+      font-size: 24px;
+      line-height: 1.2;
+      letter-spacing: -0.03em;
+    }
+
+    .project-header .meta {
+      font-size: 10.5px;
+      color: var(--muted);
+      text-align: right;
+      white-space: nowrap;
+    }
+
+    .overview-table {
+      display: grid;
+      grid-template-columns: 30mm 1fr;
+      border-top: 1px solid var(--line);
+      border-left: 1px solid var(--line);
+      margin-bottom: 5mm;
+    }
+
+    .overview-table div {
+      border-right: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+      padding: 2.4mm 3mm;
+      font-size: 10.5px;
+    }
+
+    .overview-table .key {
+      background: var(--accent-soft);
+      font-weight: 700;
+      color: var(--accent);
+    }
+
+    .image {
+      width: 100%;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      display: block;
+      background: #fff;
+    }
+
+    .note {
+      font-size: 10px;
+      color: var(--muted);
+      margin-top: 2mm;
+    }
+
+    .footer {
+      position: absolute;
+      bottom: 8mm;
+      right: 12mm;
+      font-size: 9px;
+      color: #8a94a3;
+    }
+
+    @page {
+      size: A4;
+      margin: 0;
+    }
+
+    @media print {
+      body { background: #fff; }
+      .page {
+        margin: 0;
+        width: 210mm;
+        min-height: 297mm;
+        box-shadow: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <section class="page cover">
+    <div>
+      <p class="eyebrow">NEXON GAME DATA ANALYST PORTFOLIO</p>
+      <h1 class="title">김민재<br>게임 데이터를 바탕으로 문제를 정의하고<br>개선 액션으로 연결하는 분석가 지향 포트폴리오</h1>
+      <p class="subtitle">
+        네이버 커넥트재단 부스트캠프 AI Tech 8기 프로젝트와 개인 프로젝트를 기반으로,
+        게임 데이터 분석 직무와 직접 연결되는 경험을 중심으로 정리했습니다.
+      </p>
+
+      <div class="meta-block">
+        <div class="meta-card">
+          <h3>핵심 메시지</h3>
+          <p>Python 기반 데이터 분석, 추천 모델링, API/서비스 구현 경험을 바탕으로 게임 플레이 로그에서 지표를 설계하고 인사이트를 액션으로 연결할 수 있습니다.</p>
+        </div>
+        <div class="meta-card">
+          <h3>포트폴리오 구성</h3>
+          <p>1. 개인 프로젝트 <strong>fcoach</strong><br>2. 부스트캠프 팀 프로젝트 <strong>Movie Recommendation</strong><br>3. 부스트캠프 최종 프로젝트 <strong>RMSE</strong><br>4. 학교 팀 프로젝트 <strong>Kobe Bryant Shot Selection</strong></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="grid-2">
+      <div class="card">
+        <h3>지원 직무 연결 포인트</h3>
+        <ul>
+          <li>행동 데이터를 바탕으로 문제를 구조화하는 경험</li>
+          <li>지표 정의, 전처리, 검증 전략 수립 경험</li>
+          <li>분석 결과를 서비스와 액션 제안으로 연결하는 경험</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>링크</h3>
+        <ul>
+          <li>GitHub: github.com/minzai0116</li>
+          <li>서비스: fcoach.fun</li>
+          <li>[TODO] 이메일 / 연락처는 제출본에 입력</li>
+        </ul>
+      </div>
+    </div>
+    <div class="cover-summary">
+      <div class="summary-item">
+        <div class="label">행동 분석</div>
+        <p>플레이 로그와 경기 데이터를 바탕으로 유저 행동 패턴을 구조화하고 해석합니다.</p>
+      </div>
+      <div class="summary-item">
+        <div class="label">지표 / 검증</div>
+        <p>KPI 정의, 전처리, 검증 전략 수립을 통해 분석 결과를 수치로 설명하려고 합니다.</p>
+      </div>
+      <div class="summary-item">
+        <div class="label">액션 연결</div>
+        <p>인사이트를 보고서에 그치지 않고 개선 방향과 서비스 액션으로 연결하는 데 강점이 있습니다.</p>
+      </div>
+    </div>
+    <div class="footer">1</div>
+  </section>
+
+  <section class="page">
+    <h2 class="section-title">직무 적합성 요약</h2>
+    <p class="section-subtitle">자료 가이드에서 강조한 것처럼, 프로젝트를 단순 나열하지 않고 넥슨 게임 데이터 분석가 직무와 연결되는 역량 중심으로 구성했습니다.</p>
+
+    <div class="grid-2">
+      <div class="card">
+        <h3>핵심 역량</h3>
+        <ul>
+          <li>게임/사용자 행동 데이터를 기반으로 문제를 정의하고 분석 지표를 설계하는 역량</li>
+          <li>전처리, 피처 엔지니어링, 모델링, 검증 전략 비교까지 이어지는 데이터 분석 역량</li>
+          <li>분석 결과를 FastAPI, Next.js, SQLite 기반 서비스 경험으로 연결하는 구현 역량</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>사용 기술</h3>
+        <div class="stack">
+          <span class="chip">Python</span>
+          <span class="chip">SQL</span>
+          <span class="chip">Pandas</span>
+          <span class="chip">NumPy</span>
+          <span class="chip">Scikit-learn</span>
+          <span class="chip">PyTorch</span>
+          <span class="chip">CatBoost</span>
+          <span class="chip">LightGBM</span>
+          <span class="chip">FastAPI</span>
+          <span class="chip">Next.js</span>
+          <span class="chip">SQLite</span>
+          <span class="chip">GitHub Actions</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="card" style="margin-top:5mm;">
+      <h3>프로젝트 선정 기준</h3>
+      <ul>
+        <li><strong>fcoach</strong>: FC Online 데이터를 활용한 개인 서비스로, 게임 데이터 분석 직무와 가장 직접적으로 연결되는 프로젝트</li>
+        <li><strong>Movie Recommendation</strong>: 메타데이터 EDA, 피처 엔지니어링, 리랭킹 구조 설계 경험을 보여주는 프로젝트</li>
+        <li><strong>RMSE</strong>: 대규모 데이터, 검색, 리랭킹, 서비스 구조 설계 경험을 보여주는 프로젝트</li>
+        <li><strong>Kobe Bryant Shot Selection</strong>: 검증 전략과 일반화 성능 개선 경험을 구체적인 수치로 설명할 수 있는 프로젝트</li>
+      </ul>
+    </div>
+
+    <div class="card" style="margin-top:5mm;">
+      <h3>교육 / 배경</h3>
+      <ul>
+        <li><strong>네이버 커넥트재단 부스트캠프 AI Tech 8기</strong> 수료</li>
+        <li>[TODO] 학교명 / 전공 / 졸업(예정) 시기 입력</li>
+        <li>추천 시스템, 머신러닝, 데이터 기반 서비스 설계 프로젝트 수행</li>
+      </ul>
+    </div>
+    <div class="footer">2</div>
+  </section>
+
+  <section class="page">
+    <div class="project-header">
+      <div>
+        <h2>fcoach</h2>
+        <p class="section-subtitle">FC Online 경기 데이터를 분석해 플레이 문제를 진단하고, 개선 액션과 검증 지표를 제안하는 데이터 기반 코칭 서비스</p>
+      </div>
+      <div class="meta">개인 프로젝트<br>게임 데이터 분석 직무 직접 연관</div>
+    </div>
+
+    <div class="overview-table">
+      <div class="key">기간</div><div>[TODO] 실제 진행 기간 입력</div>
+      <div class="key">사용 기술</div><div>Python, FastAPI, Next.js, SQLite, Nexon Open API, FC Online DataCenter</div>
+      <div class="key">목표</div><div>단순 전적 조회가 아니라 플레이 문제를 진단하고 개선 액션과 검증 기준까지 제안하는 서비스 구현</div>
+      <div class="key">역할</div><div>기획, 데이터 수집 API 연동, KPI 설계, 분석 API/웹 서비스 구현</div>
+      <div class="key">기여도</div><div>[TODO] 실제 기준으로 입력 권장 (예: 100%)</div>
+    </div>
+
+    <div class="grid-2">
+      <div class="card">
+        <h3>문제 정의</h3>
+        <p>기존 전적 조회 서비스는 결과 지표를 보여주는 데는 강하지만, 실제로 무엇을 바꿔야 하는지까지 연결해 주는 경우는 드뭅니다. 이 프로젝트는 FC Online 경기 데이터를 바탕으로 <strong>진단 → 개입 → 검증</strong> 흐름을 하나의 제품 경험으로 묶는 것을 목표로 했습니다.</p>
+      </div>
+      <div class="card">
+        <h3>핵심 흐름</h3>
+        <ul>
+          <li>닉네임 검색 후 OUID 조회 및 경기 데이터 수집</li>
+          <li>공식전/친선전, 5·10·30경기 단위 KPI 계산</li>
+          <li>후반 실점, 찬스 생성, 마무리, 오프사이드 등 세부 이슈 진단</li>
+          <li>액션 카드 제안 및 전후 지표 비교 구조 설계</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="grid-2" style="margin-top:5mm;">
+      <div class="card">
+        <h3>내가 한 일</h3>
+        <ul>
+          <li>Nexon Open API와 FC Online DataCenter를 조합한 데이터 수집 경로 설계</li>
+          <li>모드, 경기 수 구간별로 나눠 비교 가능한 KPI 체계 구성</li>
+          <li>FastAPI 기반 분석 API와 Next.js 기반 웹 서비스 구현</li>
+          <li>SQLite를 활용한 스냅샷, 실험 로그, 이벤트 기록 구조 설계</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>성과 및 개선점</h3>
+        <ul>
+          <li>FC Online 데이터를 활용해 분석 결과를 실제 서비스 흐름으로 연결한 개인 프로젝트 완성</li>
+          <li>단순 조회형이 아닌 액션 제안형 서비스 구조를 구현</li>
+          <li>현재 Vercel + SQLite 데모 배포 구조는 영속성 한계가 있어, 장기 운영 시 관리형 DB 전환이 필요</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer">3</div>
+  </section>
+
+  <section class="page">
+    <div class="project-header">
+      <div>
+        <h2>Movie Recommendation</h2>
+        <p class="section-subtitle">정적 선호와 시퀀셜 패턴을 함께 반영한 2단계 영화 추천 시스템</p>
+      </div>
+      <div class="meta">네이버 커넥트재단 부스트캠프 AI Tech 8기 팀 프로젝트</div>
+    </div>
+
+    <div class="overview-table">
+      <div class="key">기간</div><div>[TODO] 실제 진행 기간 입력</div>
+      <div class="key">사용 기술</div><div>Python, PyTorch, RecBole, CatBoost, Pandas</div>
+      <div class="key">목표</div><div>MovieLens 기반 Top-K 추천 성능 향상과 2-Stage 추천 파이프라인 구축</div>
+      <div class="key">역할</div><div>메타데이터 EDA, Feature Engineering, 2-Stage Re-ranking 시스템 설계</div>
+      <div class="key">기여도</div><div>[TODO] 실제 기준으로 입력 권장</div>
+    </div>
+
+    <div class="grid-2">
+      <div class="card">
+        <h3>전체 구조</h3>
+        <p>후보군 생성과 리랭킹을 분리한 2-Stage 구조를 채택했습니다. 1단계에서는 EASE와 Multi-VAE로 후보군을 생성하고, 2단계에서는 CatBoost Ranker로 최종 Top-10을 선택했습니다.</p>
+        <div class="stack">
+          <span class="chip">EASE</span>
+          <span class="chip">Multi-VAE</span>
+          <span class="chip">CatBoost Ranker</span>
+          <span class="chip">season/dayparting</span>
+          <span class="chip">genre ratio</span>
+        </div>
+      </div>
+      <div class="card">
+        <h3>내가 한 일</h3>
+        <ul>
+          <li>메타데이터 정제 및 EDA 수행</li>
+          <li>계절, 시간대, 장르 비율, 영화 인기도/랭킹 기반 피처 설계</li>
+          <li>감독/작가 1:N 관계 정제와 TF-IDF 기반 장르 표현 개선</li>
+          <li>후보 생성과 리랭킹이 분리된 파이프라인 설계</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="grid-2" style="margin-top:5mm;">
+      <div class="card">
+        <h3>성과</h3>
+        <ul>
+          <li><strong>Valid Recall@10 0.2012</strong>, <strong>Public LB 0.1670</strong></li>
+          <li>Stage 1에서 유저당 200개 후보군 생성, Stage 2에서 약 40개 피처로 최종 순위 결정</li>
+          <li>정적 선호와 시퀀셜 패턴을 함께 다루는 구조를 설계하며 추천 시스템 설계 경험 확보</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>개선점</h3>
+        <ul>
+          <li>후보군 품질 향상을 위한 retrieval 단계 고도화 여지 존재</li>
+          <li>유저 행동 시퀀스를 더 정교하게 반영하는 sequential model 실험 확장 가능</li>
+          <li>리랭킹 피처 중요도 분석을 통해 해석 가능성을 더 강화할 수 있음</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer">4</div>
+  </section>
+
+  <section class="page">
+    <div class="project-header">
+      <div>
+        <h2>RMSE: Ronaldo Market Search Engine</h2>
+        <p class="section-subtitle">LLM, 벡터 검색, ML 리랭킹을 결합한 대화형 추천 시스템</p>
+      </div>
+      <div class="meta">네이버 커넥트재단 부스트캠프 AI Tech 8기 최종 팀 프로젝트</div>
+    </div>
+
+    <div class="overview-table">
+      <div class="key">기간</div><div>[TODO] 실제 진행 기간 입력</div>
+      <div class="key">사용 기술</div><div>Python, FastAPI, PyTorch, CatBoost, PostgreSQL, Redis, Docker, GitHub Actions, k3s</div>
+      <div class="key">목표</div><div>자연어 의도를 반영해 검색·추천·설명 생성을 연결하는 대화형 추천 시스템 구현</div>
+      <div class="key">역할</div><div>EDA, 추천 시스템 아키텍처 설계, 프롬프트 엔지니어링</div>
+      <div class="key">기여도</div><div>[TODO] 실제 기준으로 입력 권장</div>
+    </div>
+
+    <div class="grid-2">
+      <div class="card">
+        <h3>프로젝트 개요</h3>
+        <ul>
+          <li>Amazon Reviews'23 Electronics 도메인 데이터 기반</li>
+          <li>리뷰 데이터 <strong>9,263,526건</strong>, 메타데이터 <strong>193,396개</strong> 활용</li>
+          <li>Dual-LLM, Filtering, Two-Tower Retrieval, ML Reranker, Explainable Recommendation 구조 적용</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>내가 한 일</h3>
+        <ul>
+          <li>전자제품 도메인 EDA 수행 및 추천 시스템 아키텍처 설계</li>
+          <li>사용자 자연어 요청을 검색 가능한 형태로 정제하는 프롬프트 흐름 설계</li>
+          <li>검색 공간 축소, 후보 생성, 리랭킹, 설명 생성이 이어지는 파이프라인 정의</li>
+        </ul>
+      </div>
+    </div>
+
+    <div style="margin-top:5mm;">
+      <img class="image" src="assets/recsys-architecture.png" alt="RMSE 추천 시스템 아키텍처">
+      <p class="note">프로젝트 README에 정리한 RecSys 아키텍처 이미지를 활용했습니다.</p>
+    </div>
+
+    <div class="card" style="margin-top:5mm;">
+      <h3>성과 및 개선점</h3>
+      <ul>
+        <li>의도 해석, 검색, 리랭킹, 설명 생성을 분리한 하이브리드 추천 구조 구현</li>
+        <li>대규모 리뷰 데이터 환경에서 확장 가능한 검색/추천 파이프라인 설계 경험 확보</li>
+        <li>LLM 기반 의도 해석의 품질을 평가할 수 있는 정량 지표 체계는 추가 보강이 필요</li>
+      </ul>
+    </div>
+    <div class="footer">5</div>
+  </section>
+
+  <section class="page">
+    <div class="project-header">
+      <div>
+        <h2>Kobe Bryant Shot Selection</h2>
+        <p class="section-subtitle">좌표 기반 피처 엔지니어링과 검증 전략 개선을 중심으로 한 이진 분류 프로젝트</p>
+      </div>
+      <div class="meta">학교 팀 프로젝트</div>
+    </div>
+
+    <div class="overview-table">
+      <div class="key">기간</div><div>[TODO] 실제 진행 기간 입력</div>
+      <div class="key">사용 기술</div><div>Python, Scikit-learn, XGBoost, LightGBM</div>
+      <div class="key">목표</div><div>코비 브라이언트 슛 성공 여부 예측과 검증 전략에 따른 일반화 성능 차이 비교</div>
+      <div class="key">역할</div><div>전처리, 피처 엔지니어링, 검증 전략 비교, 성능 분석</div>
+      <div class="key">기여도</div><div>[TODO] 실제 기준으로 입력 권장</div>
+    </div>
+
+    <div class="grid-2">
+      <div class="card">
+        <h3>핵심 접근</h3>
+        <ul>
+          <li><code>loc_x</code>, <code>loc_y</code> 기반 <strong>dist</strong>, <strong>angle</strong> 피처 생성</li>
+          <li>경기 상황 피처와 홈/원정 여부, 시간 파생 피처 구성</li>
+          <li>RandomForest, XGBoost, LightGBM 비교</li>
+          <li>StratifiedKFold, GroupKFold, OOF 기반 검증</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>성과</h3>
+        <ul>
+          <li>발표 자료 기준 <strong>69 / 1117</strong> → <strong>44 / 1117</strong>까지 개선</li>
+          <li>단순 모델 변경보다 검증 전략과 데이터 분할 방식이 성능에 크게 영향을 준다는 점 확인</li>
+          <li>일반화 성능을 고려한 평가 설계의 중요성을 배움</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="card" style="margin-top:5mm;">
+      <h3>이 포트폴리오에서 전달하고 싶은 점</h3>
+      <ul>
+        <li><strong>fcoach</strong>를 통해 게임 데이터를 서비스와 액션 제안 구조로 연결한 경험</li>
+        <li><strong>Movie Recommendation</strong>과 <strong>RMSE</strong>를 통해 대규모 데이터, 추천 시스템, 리랭킹 설계 경험</li>
+        <li><strong>Kobe</strong>를 통해 검증 전략과 성능 개선 과정을 수치로 설명하는 분석 경험</li>
+        <li>넥슨 게임 데이터 분석가 직무에서 요구하는 <strong>문제 정의, Data Driven 사고, Python 기반 분석 역량</strong>과 연결되는 포트폴리오 구성</li>
+      </ul>
+    </div>
+
+    <div class="card" style="margin-top:5mm;">
+      <h3>제출 전 체크</h3>
+      <ul>
+        <li>연락처, 학력, 프로젝트 기간, 기여도 등 placeholder 교체</li>
+        <li>지원 회사 제출 형식에 맞는 파일명으로 변경</li>
+        <li>면접 대비용으로 각 프로젝트의 개선점 질문에 대한 답변 정리</li>
+      </ul>
+    </div>
+    <div class="footer">6</div>
+  </section>
+</body>
+</html>

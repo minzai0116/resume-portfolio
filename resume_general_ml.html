@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>김민재_이력서</title>
+  <style>
+    :root {
+      --text: #18212b;
+      --muted: #5a6877;
+      --line: #d8dee7;
+      --accent: #0f4c81;
+      --accent-soft: #eaf2f8;
+      --page: #ffffff;
+      --bg: #f3f5f8;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Noto Sans KR", sans-serif;
+      line-height: 1.45;
+    }
+    .page {
+      width: 210mm;
+      min-height: 297mm;
+      margin: 12mm auto;
+      padding: 14mm 15mm;
+      background: var(--page);
+      box-shadow: 0 8px 30px rgba(20, 33, 48, 0.08);
+    }
+    .header {
+      display: grid;
+      grid-template-columns: 1.45fr 1fr;
+      gap: 10mm;
+      padding-bottom: 8mm;
+      border-bottom: 1.5px solid var(--line);
+    }
+    .name {
+      margin: 0;
+      font-size: 28px;
+      line-height: 1.1;
+      letter-spacing: -0.03em;
+    }
+    .headline {
+      margin: 4mm 0 0;
+      font-size: 13px;
+      color: var(--accent);
+      font-weight: 700;
+    }
+    .intro {
+      margin: 4mm 0 0;
+      font-size: 12px;
+      color: var(--muted);
+    }
+    .contact {
+      font-size: 11px;
+      color: var(--muted);
+      display: grid;
+      gap: 2mm;
+      align-content: start;
+      justify-items: end;
+      text-align: right;
+    }
+    .contact strong { color: var(--text); }
+    .section { margin-top: 7mm; }
+    .section-title {
+      margin: 0 0 3mm;
+      font-size: 13px;
+      font-weight: 800;
+      color: var(--accent);
+      letter-spacing: 0.01em;
+    }
+    .summary-box,
+    .skill-box {
+      background: var(--accent-soft);
+      border: 1px solid #d4e3ef;
+      border-radius: 10px;
+      padding: 4mm 4.5mm;
+    }
+    .competency-list,
+    .stack-list,
+    .edu-list,
+    .etc-list {
+      margin: 0;
+      padding-left: 4.5mm;
+      font-size: 11px;
+    }
+    .competency-list li,
+    .stack-list li,
+    .edu-list li,
+    .etc-list li { margin: 1.5mm 0; }
+    .grid-2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 5mm;
+    }
+    .project {
+      border-top: 1px solid var(--line);
+      padding-top: 3.5mm;
+      margin-top: 3.5mm;
+    }
+    .project-head {
+      display: flex;
+      justify-content: space-between;
+      gap: 4mm;
+      align-items: baseline;
+      margin-bottom: 1.5mm;
+    }
+    .project-head h3 {
+      margin: 0;
+      font-size: 12px;
+      letter-spacing: -0.01em;
+    }
+    .project-meta {
+      font-size: 10px;
+      color: var(--muted);
+      white-space: nowrap;
+    }
+    .project p {
+      margin: 0 0 1.5mm;
+      font-size: 10.5px;
+    }
+    .project ul {
+      margin: 0;
+      padding-left: 4.5mm;
+      font-size: 10.5px;
+    }
+    .project li { margin: 1mm 0; }
+    .hint {
+      margin-top: 4mm;
+      font-size: 9.5px;
+      color: #8a94a3;
+      text-align: right;
+    }
+    @page { size: A4; margin: 0; }
+    @media print {
+      body { background: #fff; }
+      .page {
+        margin: 0;
+        width: 210mm;
+        min-height: 297mm;
+        box-shadow: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <header class="header">
+      <div>
+        <h1 class="name">김민재</h1>
+        <p class="headline">데이터를 바탕으로 문제를 정의하고, 머신러닝과 서비스 구현으로 해결하는 엔지니어 지향 지원자</p>
+        <p class="intro">
+          Python 기반 데이터 분석, 추천 모델링, 서비스 구현 경험을 바탕으로
+          사용자 행동 데이터를 해석하고, 문제를 머신러닝 문제로 재정의해 제품 개선으로 연결하는 일에 관심이 있습니다.
+        </p>
+      </div>
+      <div class="contact">
+        <div><strong>지향 분야</strong> Machine Learning / Recommender Systems / Data Products</div>
+        <div><strong>GitHub</strong> github.com/minzai0116</div>
+        <div><strong>서비스</strong> fcoach.fun</div>
+        <div><strong>Email</strong> [TODO] 제출용 이메일 입력</div>
+        <div><strong>Phone</strong> [TODO] 제출용 연락처 입력</div>
+      </div>
+    </header>
+
+    <section class="section">
+      <h2 class="section-title">핵심 역량</h2>
+      <div class="summary-box">
+        <ul class="competency-list">
+          <li>사용자 행동 데이터를 바탕으로 문제를 정의하고, 분석 지표와 검증 전략을 설계한 경험</li>
+          <li>Python, Pandas, Scikit-learn, PyTorch, CatBoost를 활용한 전처리, 모델링, 리랭킹, 성능 비교 경험</li>
+          <li>분석 결과를 FastAPI, Next.js 기반 서비스로 연결하고 API 연동과 데이터 흐름까지 구현한 경험</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section grid-2">
+      <div>
+        <h2 class="section-title">보유 기술</h2>
+        <div class="skill-box">
+          <ul class="stack-list">
+            <li><strong>데이터 분석</strong> Python, SQL, Pandas, NumPy, Matplotlib, Seaborn</li>
+            <li><strong>머신러닝/추천</strong> Scikit-learn, PyTorch, CatBoost, LightGBM, RecBole</li>
+            <li><strong>서비스 구현</strong> FastAPI, Next.js, React, SQLite</li>
+            <li><strong>실험/운영</strong> Git, GitHub Actions, Docker, Vercel</li>
+          </ul>
+        </div>
+      </div>
+      <div>
+        <h2 class="section-title">학력/교육</h2>
+        <div class="skill-box">
+          <ul class="edu-list">
+            <li><strong>[TODO]</strong> 학교명 / 전공 / 재학 및 졸업(예정) 시기 입력</li>
+            <li><strong>네이버 커넥트재단</strong> 부스트캠프 AI Tech 8기 수료</li>
+            <li>추천 시스템, 머신러닝, 대규모 데이터 기반 프로젝트 수행</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2 class="section-title">대표 프로젝트</h2>
+
+      <article class="project">
+        <div class="project-head">
+          <h3>Movie Recommendation</h3>
+          <div class="project-meta">네이버 커넥트재단 부스트캠프 AI Tech 8기 팀 프로젝트</div>
+        </div>
+        <p>MovieLens 기반 사용자 시청 이력과 메타데이터를 활용한 2단계 영화 추천 시스템</p>
+        <ul>
+          <li>메타데이터 EDA, 계절/시간대/장르 비율 기반 피처 엔지니어링, 2-Stage 리랭킹 구조 설계 담당</li>
+          <li>EASE + Multi-VAE 후보 생성과 CatBoost Ranker 리랭킹을 결합해 추천 성능 개선</li>
+          <li><strong>Valid Recall@10 0.2012</strong>, <strong>Public LB 0.1670</strong> 달성</li>
+        </ul>
+      </article>
+
+      <article class="project">
+        <div class="project-head">
+          <h3>RMSE: Ronaldo Market Search Engine</h3>
+          <div class="project-meta">네이버 커넥트재단 부스트캠프 AI Tech 8기 최종 팀 프로젝트</div>
+        </div>
+        <p>LLM, 벡터 검색, ML 리랭킹을 결합해 사용자의 자연어 의도를 해석하는 대화형 추천 시스템</p>
+        <ul>
+          <li>Amazon Reviews'23 기반 Electronics 데이터 <strong>리뷰 9,263,526건</strong>, 메타데이터 <strong>193,396개</strong> 활용</li>
+          <li>EDA, 추천 시스템 아키텍처 설계, 프롬프트 엔지니어링 담당</li>
+          <li>의도 해석 → 검색 공간 축소 → 후보 검색 → 리랭킹 → 설명 생성 흐름을 하나의 파이프라인으로 설계</li>
+        </ul>
+      </article>
+
+      <article class="project">
+        <div class="project-head">
+          <h3>fcoach</h3>
+          <div class="project-meta">개인 프로젝트</div>
+        </div>
+        <p>외부 API 기반 행동 데이터를 분석해 문제를 진단하고, 액션 제안과 검증 지표를 연결한 데이터 기반 코칭 서비스</p>
+        <ul>
+          <li>Nexon Open API와 FC Online DataCenter 기반 데이터 수집, KPI 설계, FastAPI 분석 API 및 Next.js 웹 구현</li>
+          <li>공식전/친선전, 최근 5·10·30경기 구간을 나눠 플레이 패턴을 비교하고 액션 카드로 개선 방향 제시</li>
+          <li>단순 조회가 아닌 <strong>진단 → 개입 → 검증</strong> 흐름으로 분석 결과를 서비스 경험에 연결</li>
+        </ul>
+      </article>
+
+      <article class="project">
+        <div class="project-head">
+          <h3>Kobe Bryant Shot Selection</h3>
+          <div class="project-meta">학교 팀 프로젝트</div>
+        </div>
+        <p>Kaggle 데이터를 활용해 코비 브라이언트의 슛 성공 여부를 예측한 이진 분류 프로젝트</p>
+        <ul>
+          <li>좌표 기반 피처 엔지니어링, 교차 검증 전략 비교, OOF 기반 검증을 중심으로 실험</li>
+          <li>LightGBM, XGBoost, RandomForest를 비교하고 검증 방식 변경이 일반화 성능에 미치는 영향 확인</li>
+          <li><strong>44 / 1117</strong>까지 성능 개선하며, 데이터 분할과 검증 전략의 중요성을 확인</li>
+        </ul>
+      </article>
+    </section>
+
+    <section class="section grid-2">
+      <div>
+        <h2 class="section-title">기타</h2>
+        <ul class="etc-list">
+          <li>GitHub: github.com/minzai0116</li>
+          <li>개인 서비스: fcoach.fun</li>
+          <li>[TODO] 블로그 / 추가 링크가 있다면 입력</li>
+        </ul>
+      </div>
+      <div>
+        <h2 class="section-title">작성 메모</h2>
+        <ul class="etc-list">
+          <li>제출 전 연락처, 학력, 기간 정보를 실제 값으로 교체</li>
+          <li>지원 회사에 맞게 프로젝트 순서와 상단 한 줄 소개만 조정해도 활용 가능</li>
+          <li>지원서 첨부 시 파일명은 회사 제출 규칙에 맞춰 변경</li>
+        </ul>
+      </div>
+    </section>
+
+    <p class="hint">초안 파일 경로: /Users/kmj/Desktop/nexon_resume_portfolio/resume_general_ml.html</p>
+  </main>
+</body>
+</html>
