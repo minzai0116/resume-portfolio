@@ -3,151 +3,40 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>김민재 이력서 / 포트폴리오 미리보기</title>
+  <title>포트폴리오로 이동 중</title>
+  <meta http-equiv="refresh" content="0; url=./portfolio/">
+  <script>
+    window.location.replace("./portfolio/");
+  </script>
   <style>
-    :root {
-      --bg: #eef2f7;
-      --page: #ffffff;
-      --text: #15202b;
-      --muted: #607080;
-      --line: #d9e0e8;
-      --accent: #123d68;
-      --accent-soft: #e9f0f6;
-    }
-    * { box-sizing: border-box; }
     body {
       margin: 0;
-      background: linear-gradient(180deg, #f5f8fb 0%, #eef2f7 100%);
-      color: var(--text);
+      min-height: 100vh;
+      display: grid;
+      place-items: center;
+      background: #f3f6fa;
+      color: #15202b;
       font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Noto Sans KR", sans-serif;
-      line-height: 1.55;
     }
-    .wrap {
-      max-width: 980px;
-      margin: 0 auto;
-      padding: 56px 24px 72px;
-    }
-    .hero {
-      margin-bottom: 28px;
-    }
-    .eyebrow {
-      margin: 0 0 10px;
-      color: var(--accent);
-      font-size: 13px;
-      font-weight: 800;
-      letter-spacing: 0.04em;
-      text-transform: uppercase;
-    }
-    h1 {
-      margin: 0;
-      font-size: 42px;
-      line-height: 1.16;
-      letter-spacing: -0.04em;
-    }
-    .subtitle {
-      margin: 16px 0 0;
-      max-width: 760px;
-      font-size: 16px;
-      color: var(--muted);
-    }
-    .grid {
-      display: grid;
-      grid-template-columns: minmax(0, 1fr);
-      gap: 18px;
-      margin-top: 24px;
-    }
-    .card {
-      background: var(--page);
-      border: 1px solid var(--line);
-      border-radius: 18px;
-      padding: 22px;
+    .box {
+      padding: 24px 28px;
+      border: 1px solid #d9e0e8;
+      border-radius: 16px;
+      background: #ffffff;
       box-shadow: 0 10px 28px rgba(17, 33, 51, 0.05);
+      text-align: center;
     }
-    .card h2 {
-      margin: 0 0 8px;
-      font-size: 20px;
-      letter-spacing: -0.02em;
-    }
-    .card p {
-      margin: 0;
-      color: var(--muted);
-      font-size: 14px;
-    }
-    .links {
-      margin-top: 16px;
-      display: grid;
-      gap: 10px;
-    }
-    .link {
-      display: flex;
-      justify-content: space-between;
-      gap: 16px;
-      align-items: center;
-      padding: 14px 16px;
-      border-radius: 12px;
-      background: var(--accent-soft);
-      color: var(--text);
-      text-decoration: none;
-      font-size: 14px;
+    a {
+      color: #123d68;
       font-weight: 700;
-    }
-    .link span:last-child {
-      font-size: 12px;
-      color: var(--accent);
-      white-space: nowrap;
-    }
-    .note {
-      margin-top: 24px;
-      padding: 16px 18px;
-      border-radius: 14px;
-      background: rgba(255, 255, 255, 0.72);
-      border: 1px solid var(--line);
-      color: var(--muted);
-      font-size: 14px;
-    }
-    @media (max-width: 760px) {
-      .wrap { padding: 40px 18px 56px; }
-      h1 { font-size: 32px; }
-      .grid { grid-template-columns: 1fr; }
-      .link {
-        flex-direction: column;
-        align-items: flex-start;
-      }
+      text-decoration: none;
     }
   </style>
 </head>
 <body>
-  <main class="wrap">
-    <section class="hero">
-      <p class="eyebrow">Preview Hub</p>
-      <h1>김민재 이력서 / 포트폴리오 미리보기</h1>
-      <p class="subtitle">
-        로컬 파일로 흩어져 보던 문서를 한 페이지에서 확인할 수 있도록 정리한 진입 화면입니다.
-        현재는 특정 회사 파생본 없이, 범용 이력서와 포트폴리오만 유지하는 구조로 정리했습니다.
-      </p>
-    </section>
-
-    <section class="grid">
-      <article class="card">
-        <h2>범용 문서</h2>
-        <p>여러 회사 지원에 공통으로 활용할 수 있는 기본 이력서와 포트폴리오입니다.</p>
-        <div class="links">
-          <a class="link" href="./resume_general_ml.html">
-            <span>이력서 보기</span>
-            <span>resume_general_ml.html</span>
-          </a>
-          <a class="link" href="./portfolio_general_ml.html">
-            <span>포트폴리오 보기</span>
-            <span>portfolio_general_ml.html</span>
-          </a>
-        </div>
-      </article>
-    </section>
-
-    <section class="note">
-      이 페이지는 GitHub Pages로 배포되는 정적 문서 허브입니다.
-      HTML 파일을 수정하고 GitHub에 푸시하면 같은 링크에서 최신 버전을 바로 확인할 수 있습니다.
-    </section>
+  <main class="box">
+    <p>포트폴리오 페이지로 이동 중입니다.</p>
+    <p><a href="./portfolio/">자동 이동이 되지 않으면 여기를 눌러주세요.</a></p>
   </main>
 </body>
 </html>

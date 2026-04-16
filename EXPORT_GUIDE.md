@@ -2,13 +2,13 @@
 
 생성된 파일:
 
-- `resume_general_ml.html`
-- `portfolio_general_ml.html`
+- `resume/index.html`
+- `portfolio/index.html`
 - `TAILORING_GUIDE.md`
 
 ## 1. 어떤 파일을 기본으로 쓰면 되는지
 
-- 기본 문서는 `resume_general_ml.html`, `portfolio_general_ml.html`입니다.
+- 기본 문서는 `resume/index.html`, `portfolio/index.html`입니다.
 - 회사별로 조금씩 바꿀 때는 `TAILORING_GUIDE.md`를 참고하면 됩니다.
 
 ## 2. 먼저 수정할 항목
@@ -23,7 +23,7 @@
 
 ## 3. PDF로 저장하는 방법
 
-1. Finder에서 원하는 html 파일을 엽니다.
+1. Finder에서 `resume/index.html` 또는 `portfolio/index.html` 파일을 엽니다.
 2. Safari 또는 Chrome에서 파일이 열리면 `파일 -> 프린트`로 이동합니다.
 3. 프린트 대화상자에서 `PDF로 저장`을 선택합니다.
 4. 파일명은 제출 규칙에 맞게 변경합니다.

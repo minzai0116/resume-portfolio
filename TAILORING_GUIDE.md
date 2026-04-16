@@ -2,8 +2,8 @@
 
 기본 문서:
 
-- `resume_general_ml.html`
-- `portfolio_general_ml.html`
+- `resume/index.html`
+- `portfolio/index.html`
 
 이 두 파일은 특정 회사에 종속되지 않는 범용 기본본입니다.
 
