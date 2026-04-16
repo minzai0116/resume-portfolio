@@ -7,8 +7,6 @@ GitHub Pages로 배포하는 이력서/포트폴리오 미리보기 문서입니
 - `index.html`: 미리보기 허브
 - `resume_general_ml.html`: 범용 이력서
 - `portfolio_general_ml.html`: 범용 포트폴리오
-- `resume_nexon_game_data_analyst.html`: 넥슨 지원용 이력서
-- `portfolio_nexon_game_data_analyst.html`: 넥슨 지원용 포트폴리오
 
 ## 수정 방법
 
@@ -20,3 +18,4 @@ GitHub Pages로 배포하는 이력서/포트폴리오 미리보기 문서입니
 
 - Pages는 정적 파일 기반이라 별도 빌드가 필요 없습니다.
 - 반영까지 수십 초에서 몇 분 정도 걸릴 수 있습니다.
+- 회사별 제출이 필요하면 범용 문서를 복제한 뒤 내용만 조정하는 방식으로 운영하면 됩니다.

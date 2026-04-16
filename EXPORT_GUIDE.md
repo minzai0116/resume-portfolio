@@ -4,14 +4,11 @@
 
 - `resume_general_ml.html`
 - `portfolio_general_ml.html`
-- `resume_nexon_game_data_analyst.html`
-- `portfolio_nexon_game_data_analyst.html`
 - `TAILORING_GUIDE.md`
 
 ## 1. 어떤 파일을 기본으로 쓰면 되는지
 
-- 여러 회사에 공통으로 쓸 기본본은 `resume_general_ml.html`, `portfolio_general_ml.html`입니다.
-- 넥슨에 바로 제출할 버전은 `resume_nexon_game_data_analyst.html`, `portfolio_nexon_game_data_analyst.html`입니다.
+- 기본 문서는 `resume_general_ml.html`, `portfolio_general_ml.html`입니다.
 - 회사별로 조금씩 바꿀 때는 `TAILORING_GUIDE.md`를 참고하면 됩니다.
 
 ## 2. 먼저 수정할 항목
@@ -43,8 +40,6 @@
 - 범용 제출본
   - `김민재_이력서.pdf`
   - `김민재_포트폴리오.pdf`
-- `김민재_넥슨_게임데이터분석가_이력서.pdf`
-- `김민재_넥슨_게임데이터분석가_포트폴리오.pdf`
 - `김민재_당근_이력서.pdf`
 - `김민재_당근_포트폴리오.pdf`
 
