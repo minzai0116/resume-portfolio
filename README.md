@@ -1,22 +1,18 @@
-# resume-portfolio
+# 김민재 이력서 / 포트폴리오
 
-GitHub Pages로 배포하는 이력서/포트폴리오 미리보기 문서입니다.
+이 저장소는 GitHub Pages로 공개하는 이력서와 포트폴리오 문서를 담고 있습니다.
 
-## 파일 구성
+## 바로 보기
 
-- `index.html`: 루트 접속 시 포트폴리오 페이지로 이동
-- `resume/index.html`: 범용 이력서
-- `portfolio/index.html`: 범용 포트폴리오
+- 포트폴리오: [minzai0116.github.io/resume-portfolio/portfolio/](https://minzai0116.github.io/resume-portfolio/portfolio/)
+- 이력서: [minzai0116.github.io/resume-portfolio/resume/](https://minzai0116.github.io/resume-portfolio/resume/)
 
-## 수정 방법
+## 구성
 
-1. `resume/index.html` 또는 `portfolio/index.html` 내용을 수정합니다.
-2. 변경 사항을 커밋합니다.
-3. GitHub에 푸시하면 GitHub Pages에 반영됩니다.
+- `portfolio/`: 추천 시스템, 데이터 분석, 서비스 구현 경험을 중심으로 정리한 포트폴리오
+- `resume/`: 핵심 역량, 대표 프로젝트, 링크를 정리한 이력서
 
-## 참고
+## 소개
 
-- Pages는 정적 파일 기반이라 별도 빌드가 필요 없습니다.
-- 반영까지 수십 초에서 몇 분 정도 걸릴 수 있습니다.
-- 회사별 제출이 필요하면 범용 문서를 복제한 뒤 내용만 조정하는 방식으로 운영하면 됩니다.
-- 공개 주소는 `/resume/`, `/portfolio/`처럼 분리된 경로로 사용할 수 있습니다.
+- 추천 시스템, 검색/리랭킹, 데이터 기반 서비스 구현 경험을 중심으로 구성했습니다.
+- 네이버 커넥트재단 부스트캠프 AI Tech 8기 프로젝트와 개인 프로젝트를 기반으로 정리했습니다.
