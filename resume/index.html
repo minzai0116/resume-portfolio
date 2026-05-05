@@ -37,6 +37,10 @@
       border-bottom: 2px solid var(--accent);
     }
     h1, h2, h3, p { margin: 0; }
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
     .name {
       font-size: 30px;
       line-height: 1;
@@ -127,6 +131,11 @@
       display: block;
       margin-top: 1mm;
     }
+    .entry-side .link-row {
+      color: var(--accent);
+      font-size: 9.5px;
+      font-weight: 700;
+    }
     .entry-main p {
       font-size: 10.8px;
       color: var(--muted);
@@ -166,16 +175,17 @@
     <header class="header">
       <div>
         <h1 class="name">김민재</h1>
-        <p class="role">추천 시스템 / 데이터 기반 서비스 개발자</p>
         <p class="summary">
           사용자 행동 데이터를 바탕으로 문제를 정의하고, 추천 모델링과 서비스 구현으로 연결하는 경험을 쌓았습니다.
-          데이터 분석, 피처 엔지니어링, 리랭킹, API/웹 구현을 하나의 제품 흐름 안에서 다루는 데 관심이 있습니다.
+          데이터 분석, 피처 엔지니어링, 리랭킹, API/웹 구현을 하나의 제품 흐름 안에서 다뤄왔습니다.
         </p>
       </div>
       <div class="contact">
+        <div><strong>Email</strong> abcda2@naver.com</div>
+        <div><strong>Phone</strong> 010-8996-4578</div>
         <div><strong>GitHub</strong> github.com/minzai0116</div>
-        <div><strong>Portfolio</strong> minzai0116.github.io/resume-portfolio/portfolio/</div>
-        <div><strong>Service</strong> fcoach.fun</div>
+        <div><strong>Portfolio</strong> minzai0116.github.io/resume-portfolio/</div>
+        <div><strong>Kaggle</strong> kaggle.com/minzai0116</div>
       </div>
     </header>
 
@@ -203,10 +213,11 @@
         </div>
       </div>
       <div>
-        <h2 class="section-title">교육</h2>
+        <h2 class="section-title">교육 / 수상</h2>
         <ul class="compact-list">
-          <li><strong>네이버 커넥트재단 부스트캠프 AI Tech 8기</strong> 수료</li>
-          <li>추천 시스템, 머신러닝, 대규모 데이터 기반 팀 프로젝트 수행</li>
+          <li><strong>세종대학교 데이터사이언스학과</strong> 졸업 <span>2019 - 2025.08</span></li>
+          <li><strong>네이버 커넥트재단 부스트캠프 AI Tech 8기</strong> 수료 <span>2025.09 - 2026.02</span></li>
+          <li><strong>제19회 세종대학교 창의설계경진대회</strong> 최우수상 수상 <span>2025, Sound_of_Heart</span></li>
         </ul>
       </div>
     </section>
@@ -220,6 +231,7 @@
           개인 프로젝트
           <span>데이터 기반 코칭 서비스</span>
           <span class="tag">FastAPI · Next.js</span>
+          <span class="link-row"><a href="https://fcoach.fun">서비스 링크</a> · <a href="https://github.com/minzai0116/fcoach">GitHub 링크</a></span>
         </div>
         <div class="entry-main">
           <p>FC Online 경기 데이터를 분석해 플레이 문제를 진단하고, 개선 액션과 검증 지표를 제안하는 서비스</p>
@@ -237,6 +249,7 @@
           부스트캠프 최종 팀 프로젝트
           <span>대화형 추천 시스템</span>
           <span class="tag">Retrieval · Reranking · LLM</span>
+          <span class="link-row"><a href="https://ait8networkingday.oopy.io/302f145d-e995-815d-bc1f-c0d59f0ff9f6">소개 링크</a> · <a href="https://github.com/minzai0116/pro-recsys-finalproject-recsys-06">GitHub 링크</a></span>
         </div>
         <div class="entry-main">
           <p>LLM, 벡터 검색, ML 리랭킹을 결합해 자연어 의도를 반영하는 상품 추천 시스템</p>
@@ -254,6 +267,7 @@
           부스트캠프 팀 프로젝트
           <span>2-Stage 영화 추천</span>
           <span class="tag">PyTorch · CatBoost</span>
+          <span class="link-row"><a href="https://github.com/minzai0116/pro-recsys-movierecommendation-recsys-06">GitHub 링크</a></span>
         </div>
         <div class="entry-main">
           <p>MovieLens 기반 사용자 시청 이력과 메타데이터를 활용한 Top-K 영화 추천 시스템</p>
@@ -269,8 +283,9 @@
         <div class="entry-side">
           <strong>Sound_of_Heart</strong>
           팀 프로젝트
-          <span>PM / 프론트엔드 / 상담형 LLM</span>
-          <span class="tag">PM · Frontend · Prompt Flow</span>
+          <span>상담형 LLM 서비스</span>
+          <span class="tag">React · GPT API</span>
+          <span class="link-row"><a href="https://github.com/minzai0116/Sound_of_Heart">GitHub 링크</a> · 2025 최우수상</span>
         </div>
         <div class="entry-main">
           <p>정서적 어려움을 겪는 사용자를 위한 GPT 기반 상담형 챗봇과 커뮤니티 멘탈케어 서비스</p>
@@ -285,18 +300,19 @@
 
     <section class="section two-column">
       <div>
-        <h2 class="section-title">기타 프로젝트</h2>
+        <h2 class="section-title">추가 데이터/DB 프로젝트</h2>
         <ul class="compact-list">
-          <li><strong>Book Rating Prediction</strong> 사용자/도서 정보를 활용한 평점 예측 추천 시스템</li>
-          <li><strong>Kobe Bryant Shot Selection</strong> 좌표 기반 피처 엔지니어링과 검증 전략을 적용한 이진 분류</li>
+          <li><strong>Book Rating Prediction</strong> EDA, CatBoost baseline 전처리, 카테고리/지역 기반 피처 엔지니어링</li>
+          <li><strong>서울 지하철 접근성 DB</strong> 공공데이터 통합, ERD 설계, SQL 질의 예시 구성</li>
         </ul>
       </div>
       <div>
-        <h2 class="section-title">링크</h2>
+        <h2 class="section-title">Kaggle 실습 프로젝트</h2>
         <ul class="compact-list">
-          <li>GitHub: github.com/minzai0116</li>
-          <li>Portfolio: minzai0116.github.io/resume-portfolio/portfolio/</li>
-          <li>Service: fcoach.fun</li>
+          <li><strong>Kobe Bryant Shot Selection</strong> 거리·각도 피처 설계, K-Fold/OOF 검증 기반 이진 분류</li>
+          <li><strong>House Prices</strong> 결측치 처리, log1p 변환, 원-핫 인코딩, 트리 기반 회귀</li>
+          <li><strong>Digit Recognizer</strong> CNN, BatchNormalization, Dropout, EarlyStopping 기반 이미지 분류</li>
+          <li><strong>Store Sales</strong> 날짜 파생 변수, 외부 데이터 결합, LightGBM 기반 시계열 예측</li>
         </ul>
       </div>
     </section>
