@@ -154,6 +154,40 @@
       display: block;
       background: #fff;
     }
+    .visual-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 5mm;
+      margin-top: 5mm;
+    }
+    .visual-card {
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 3mm;
+      background: #fff;
+    }
+    .visual-card img {
+      width: 100%;
+      height: 56mm;
+      object-fit: contain;
+      border-radius: 10px;
+      display: block;
+      background: #f8fafc;
+    }
+    .visual-card.cover img {
+      object-fit: cover;
+    }
+    .visual-card.wide {
+      margin-top: 5mm;
+    }
+    .visual-card.wide img {
+      height: 58mm;
+    }
+    .visual-caption {
+      margin-top: 2mm;
+      font-size: 10px;
+      color: var(--muted);
+    }
     .note {
       font-size: 10px;
       color: var(--muted);
@@ -287,8 +321,15 @@
       </div>
     </div>
 
-    <div style="margin-top:5mm;">
-      <img class="image" src="../assets/service-architecture.png" alt="fcoach 서비스 구조">
+    <div class="visual-grid">
+      <div class="visual-card">
+        <img src="../assets/fcoach-service.png" alt="fcoach 서비스 화면">
+        <p class="visual-caption">실제 배포 서비스 화면: 진단 대시보드, 선수 리포트, 전술 코칭, 개선 추적 흐름 제공</p>
+      </div>
+      <div class="visual-card">
+        <img src="../assets/service-architecture.png" alt="fcoach 서비스 구조">
+        <p class="visual-caption">Nexon Open API 기반 데이터 수집부터 KPI 계산, 분석 API, 웹 화면까지 연결한 구조</p>
+      </div>
     </div>
 
     <div class="grid-2" style="margin-top:5mm;">
@@ -348,8 +389,15 @@
       </div>
     </div>
 
-    <div style="margin-top:5mm;">
-      <img class="image" src="../assets/recsys-architecture.png" alt="RMSE 추천 시스템 아키텍처">
+    <div class="visual-grid">
+      <div class="visual-card cover">
+        <img src="../assets/rmse-showcase.png" alt="RMSE 프로젝트 소개 화면">
+        <p class="visual-caption">네트워킹데이 프로젝트 소개 화면: 대화형 상품 추천 서비스로 전시</p>
+      </div>
+      <div class="visual-card">
+        <img src="../assets/recsys-architecture.png" alt="RMSE 추천 시스템 아키텍처">
+        <p class="visual-caption">사용자 의도 해석, 검색, 리랭킹, 설명 생성을 분리한 추천 파이프라인</p>
+      </div>
     </div>
 
     <div class="card" style="margin-top:5mm;">
@@ -380,13 +428,14 @@
       <div class="key">핵심 관점</div><div>CBT, ACT, DBT 관점을 반영한 대화 흐름과 사용자 경험 설계</div>
     </div>
 
-    <div class="grid-2">
-      <div class="card">
-        <h3>문제 정의</h3>
-        <p>상담형 챗봇은 단순히 위로 문장을 생성하는 것만으로는 충분하지 않습니다. 사용자의 감정과 상황을 파악하고, 안전한 범위 안에서 자기 이해와 다음 행동으로 이어지는 대화 구조가 필요하다고 보았습니다.</p>
+    <div class="visual-grid">
+      <div class="visual-card cover">
+        <img src="../assets/sound-community-demo.gif" alt="Sound_of_Heart 커뮤니티 화면">
+        <p class="visual-caption">챗봇 경험과 커뮤니티 기능을 함께 제공하는 멘탈케어 서비스 화면</p>
       </div>
       <div class="card">
-        <h3>핵심 흐름</h3>
+        <h3>문제 정의 / 핵심 흐름</h3>
+        <p>상담형 챗봇은 단순 위로 문장보다, 감정과 상황을 파악하고 안전한 범위 안에서 자기 이해와 다음 행동으로 이어지는 구조가 필요하다고 보았습니다.</p>
         <ul>
           <li>사용자 발화에서 감정과 상황 맥락 파악</li>
           <li>상담 이론 기반 응답 방향 선택</li>
@@ -455,6 +504,11 @@
           <li>후보 생성과 리랭킹이 분리된 파이프라인 설계</li>
         </ul>
       </div>
+    </div>
+
+    <div class="visual-card wide">
+      <img src="../assets/movie-recommendation-flow.svg" alt="Movie Recommendation 2-Stage 추천 파이프라인">
+      <p class="visual-caption">후보 생성과 리랭킹을 분리하고, 메타데이터 피처를 결합해 Top-K 추천 성능을 개선한 흐름</p>
     </div>
 
     <div class="grid-2" style="margin-top:5mm;">
