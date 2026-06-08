@@ -79,6 +79,19 @@
     }
     .meta-card p, .card p, .card li { font-size: 11px; }
     .card ul { margin: 0; padding-left: 4mm; }
+    .card.contribution-card {
+      border-left: 3px solid var(--accent);
+      background: #fbfdff;
+    }
+    .card.contribution-card h3 {
+      color: var(--text);
+      font-size: 13px;
+      font-weight: 900;
+    }
+    .card.contribution-card li:first-child {
+      color: var(--text);
+      font-weight: 800;
+    }
     .focus-row {
       display: flex;
       flex-wrap: wrap;
@@ -187,22 +200,26 @@
     }
     .tool-link-grid {
       display: grid;
-      grid-template-columns: 1.2fr 0.8fr;
+      grid-template-columns: 1fr;
       gap: 5mm;
     }
     .tool-rows {
       display: grid;
-      gap: 2mm;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 3mm;
     }
     .tool-row {
-      display: grid;
-      grid-template-columns: 24mm 1fr;
-      gap: 2mm;
-      align-items: start;
+      min-height: 28mm;
+      padding: 3mm;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      background: #fff;
       font-size: 10.5px;
     }
     .tool-row strong {
+      display: block;
       color: var(--accent);
+      margin-bottom: 1.2mm;
     }
     .link-buttons {
       display: grid;
@@ -463,12 +480,12 @@
             <span>2019.03 - 2025.08 졸업 · 전체 학점 4.08 / 4.5</span>
           </div>
           <div class="evidence-item">
-            <strong>부스트캠프 AI Tech 8기</strong>
-            <span>2025.09 - 2026.02 수료</span>
-          </div>
-          <div class="evidence-item">
             <strong>제19회 세종대학교 창의설계경진대회</strong>
             <span>Sound_of_Heart 프로젝트로 최우수상 수상</span>
+          </div>
+          <div class="evidence-item">
+            <strong>부스트캠프 AI Tech 8기</strong>
+            <span>2025.09 - 2026.02 수료</span>
           </div>
         </div>
       </div>
@@ -483,29 +500,12 @@
             <span>Python, SQL, Pandas, Scikit-learn, PyTorch, CatBoost로 EDA, 피처 엔지니어링, 모델 실험 수행</span>
           </div>
           <div class="tool-row">
-            <strong>추천</strong>
+            <strong>추천/랭킹</strong>
             <span>EASE, Multi-VAE, Two-Tower Retrieval, CatBoost Ranker 기반 후보 생성·리랭킹 실험</span>
           </div>
           <div class="tool-row">
-            <strong>서비스</strong>
+            <strong>서비스 구현</strong>
             <span>FastAPI, Next.js, SQLite, GitHub Actions를 활용한 분석 API와 웹 서비스 구현</span>
-          </div>
-        </div>
-      </div>
-      <div class="card">
-        <h3>정량 근거</h3>
-        <div class="evidence-list">
-          <div class="evidence-item">
-            <strong>학업 성취</strong>
-            <span>세종대학교 데이터사이언스학과 전체 학점 4.08 / 4.5</span>
-          </div>
-          <div class="evidence-item">
-            <strong>추천 시스템 성능</strong>
-            <span>Movie Recommendation Valid Recall@10 0.2012, Public LB 0.1670</span>
-          </div>
-          <div class="evidence-item">
-            <strong>대규모 데이터 경험</strong>
-            <span>RMSE 리뷰 9,263,526건, 메타데이터 193,396개 기반 추천 파이프라인 설계</span>
           </div>
         </div>
       </div>
@@ -540,8 +540,8 @@
           <li>Dual-LLM, Filtering, Two-Tower Retrieval, ML Reranker, Explainable Recommendation 구조 적용</li>
         </ul>
       </div>
-      <div class="card">
-        <h3>내가 한 일</h3>
+      <div class="card contribution-card">
+        <h3>핵심 기여</h3>
         <ul>
           <li>전자제품 도메인 EDA 수행 및 추천 시스템 아키텍처 설계</li>
           <li>사용자 자연어 요청을 검색 가능한 형태로 정제하는 프롬프트 흐름 설계</li>
@@ -613,8 +613,8 @@
     </div>
 
     <div class="grid-2" style="margin-top:5mm;">
-      <div class="card">
-        <h3>내가 한 일</h3>
+      <div class="card contribution-card">
+        <h3>핵심 기여</h3>
         <ul>
           <li>Nexon Open API와 FC Online DataCenter를 조합한 데이터 수집 경로 설계</li>
           <li>모드와 경기 수 구간별로 비교 가능한 KPI 체계 구성</li>
@@ -662,8 +662,8 @@
           <span class="chip">genre ratio</span>
         </div>
       </div>
-      <div class="card">
-        <h3>내가 한 일</h3>
+      <div class="card contribution-card">
+        <h3>핵심 기여</h3>
         <ul>
           <li>메타데이터 정제 및 EDA 수행</li>
           <li>계절, 시간대, 장르 비율, 영화 인기도/랭킹 기반 피처 설계</li>
@@ -735,8 +735,8 @@
     </div>
 
     <div class="grid-2" style="margin-top:5mm;">
-      <div class="card">
-        <h3>내가 한 일</h3>
+      <div class="card contribution-card">
+        <h3>핵심 기여</h3>
         <ul>
           <li>PM / 프론트엔드 역할로 서비스 흐름과 주요 화면 구현에 참여</li>
           <li>CBT, ACT, DBT 관점을 반영한 응답 전략 구성</li>
