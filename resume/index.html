@@ -19,22 +19,22 @@
       background: var(--bg);
       color: var(--text);
       font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Noto Sans KR", sans-serif;
-      line-height: 1.48;
+      line-height: 1.42;
     }
     .page {
       width: 210mm;
       min-height: 297mm;
       margin: 12mm auto;
-      padding: 15mm 17mm;
+      padding: 12mm 15mm;
       background: var(--page);
       box-shadow: 0 8px 30px rgba(20, 33, 48, 0.08);
     }
     .header {
       display: grid;
-      grid-template-columns: 1fr 72mm;
-      gap: 10mm;
-      padding-bottom: 7mm;
-      border-bottom: 2px solid var(--accent);
+      grid-template-columns: 1fr 76mm;
+      gap: 6mm;
+      padding-bottom: 6mm;
+      border-bottom: 3px solid var(--accent);
     }
     h1, h2, h3, p { margin: 0; }
     a {
@@ -42,64 +42,79 @@
       text-decoration: none;
     }
     .name {
-      font-size: 30px;
+      font-size: 34px;
       line-height: 1;
-      letter-spacing: -0.04em;
-      margin-bottom: 4mm;
+      letter-spacing: -0.03em;
+      font-weight: 900;
+      margin-bottom: 1.8mm;
+    }
+    .name-meta {
+      color: var(--accent);
+      font-size: 10px;
+      font-weight: 900;
+      letter-spacing: 0.08em;
+      margin-bottom: 1.6mm;
+      text-transform: uppercase;
     }
     .role {
-      font-size: 14px;
+      display: inline-block;
+      font-size: 12px;
       color: var(--accent);
-      font-weight: 800;
-      margin-bottom: 4mm;
+      font-weight: 900;
+      margin-bottom: 2.6mm;
+      white-space: nowrap;
     }
     .summary {
-      font-size: 11.5px;
-      color: var(--muted);
+      font-size: 11.2px;
+      color: #344250;
       max-width: 112mm;
     }
     .contact {
       display: grid;
-      gap: 1.8mm;
+      gap: 1.4mm;
       align-content: start;
-      font-size: 10.5px;
+      font-size: 9.9px;
       color: var(--muted);
       text-align: right;
+      padding-top: 13mm;
     }
     .contact strong {
       color: var(--text);
       margin-right: 1.5mm;
     }
+    .contact a {
+      white-space: nowrap;
+    }
     .section {
-      margin-top: 6mm;
+      margin-top: 4.5mm;
     }
     .section-title {
-      font-size: 13px;
+      font-size: 16px;
       color: var(--accent);
       font-weight: 900;
-      letter-spacing: 0.01em;
-      margin-bottom: 3mm;
-      padding-bottom: 1.5mm;
-      border-bottom: 1px solid var(--line);
+      letter-spacing: 0;
+      margin-bottom: 2.4mm;
+      padding-bottom: 1.4mm;
+      border-bottom: 2px solid var(--accent);
     }
     .two-column {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 7mm;
+      gap: 6mm;
     }
     ul {
       margin: 0;
       padding-left: 4.2mm;
     }
     li {
-      margin: 1.1mm 0;
-      font-size: 10.7px;
+      margin: 0.75mm 0;
+      font-size: 10.3px;
     }
     .skill-grid {
       display: grid;
       grid-template-columns: 22mm 1fr;
-      gap: 2mm 4mm;
-      font-size: 10.7px;
+      gap: 1.4mm 3.5mm;
+      font-size: 10.2px;
     }
     .skill-grid .label {
       color: var(--accent);
@@ -110,53 +125,53 @@
     }
     .entry {
       display: grid;
-      grid-template-columns: 38mm 1fr;
-      gap: 5mm;
-      padding: 3.5mm 0;
+      grid-template-columns: 43mm 1fr;
+      gap: 4mm;
+      padding: 2.2mm 0;
       border-bottom: 1px solid var(--line);
     }
     .entry:last-child { border-bottom: 0; }
     .entry-side {
-      font-size: 10.2px;
+      font-size: 9.9px;
       color: var(--muted);
     }
     .entry-side strong {
       display: block;
       color: var(--text);
-      font-size: 12px;
-      margin-bottom: 1mm;
+      font-size: 13px;
+      margin-bottom: 0.8mm;
       letter-spacing: -0.01em;
     }
     .entry-side span {
       display: block;
-      margin-top: 1mm;
+      margin-top: 0.7mm;
     }
     .entry-side .link-row {
       color: var(--accent);
-      font-size: 9.5px;
+      font-size: 9.2px;
       font-weight: 700;
     }
     .entry-main p {
-      font-size: 10.8px;
+      font-size: 10.3px;
       color: var(--muted);
-      margin-bottom: 1.5mm;
+      margin-bottom: 1mm;
     }
     .entry-main ul {
       padding-left: 4mm;
     }
     .tag {
       display: inline-block;
-      margin-top: 1.6mm;
-      padding: 0.8mm 1.8mm;
+      margin-top: 1.2mm;
+      padding: 0.6mm 1.5mm;
       border: 1px solid var(--line);
       border-radius: 999px;
       color: var(--accent);
-      font-size: 9.5px;
+      font-size: 9.1px;
       font-weight: 700;
       background: #f7f9fb;
     }
     .compact-list li {
-      margin: 1.2mm 0;
+      margin: 0.8mm 0;
     }
     @page { size: A4; margin: 0; }
     @media print {
@@ -174,27 +189,29 @@
   <main class="page">
     <header class="header">
       <div>
+        <p class="name-meta">Machine Learning Engineer</p>
         <h1 class="name">김민재</h1>
+        <p class="role">Recommendation · Ranking · Search</p>
         <p class="summary">
-          사용자 행동 데이터를 바탕으로 문제를 정의하고, 추천 모델링과 서비스 구현으로 연결하는 경험을 쌓았습니다.
-          데이터 분석, 피처 엔지니어링, 리랭킹, API/웹 구현을 하나의 제품 흐름 안에서 다뤄왔습니다.
+          추천/검색 문제를 데이터 분석과 모델링으로 구조화하고, 결과를 API/웹 서비스로 구현하는 경험을 쌓았습니다.
+          후보 생성, 피처 엔지니어링, 리랭킹, LLM 기반 의도 해석을 하나의 추천 시스템 흐름 안에서 다뤄왔습니다.
         </p>
       </div>
       <div class="contact">
         <div><strong>Email</strong> abcda2@naver.com</div>
         <div><strong>Phone</strong> 010-8996-4578</div>
-        <div><strong>GitHub</strong> github.com/minzai0116</div>
-        <div><strong>Portfolio</strong> minzai0116.github.io/resume-portfolio/</div>
-        <div><strong>Kaggle</strong> kaggle.com/minzai0116</div>
+        <div><strong>GitHub</strong> <a href="https://github.com/minzai0116">github.com/minzai0116</a></div>
+        <div><strong>Portfolio</strong> <a href="https://minzai0116.github.io/resume-portfolio/portfolio/">minzai0116.github.io/resume-portfolio/portfolio/</a></div>
+        <div><strong>Kaggle</strong> <a href="https://kaggle.com/minzai0116">kaggle.com/minzai0116</a></div>
       </div>
     </header>
 
     <section class="section">
       <h2 class="section-title">핵심 역량</h2>
       <ul class="compact-list">
-        <li>사용자 행동 데이터와 자연어 요청을 분석해 추천/검색 문제로 재정의하고, 실험 지표와 검증 흐름을 설계했습니다.</li>
-        <li>후보 생성, 피처 엔지니어링, 리랭킹, 프롬프트 설계를 활용해 추천 결과의 품질을 개선한 경험이 있습니다.</li>
-        <li>분석 결과를 FastAPI, Next.js 기반 API/웹 서비스로 연결하고 배포까지 수행한 경험이 있습니다.</li>
+        <li>사용자 행동 데이터와 자연어 요청을 분석해 추천/검색 문제로 재정의하고, Recall@K 등 오프라인 지표와 검증 흐름을 설계했습니다.</li>
+        <li>후보 생성, 피처 엔지니어링, 리랭킹을 분리해 추천 품질 개선 실험을 수행한 경험이 있습니다.</li>
+        <li>분석·모델링 결과를 FastAPI, Next.js 기반 API/웹 서비스로 연결하고 배포까지 수행했습니다.</li>
       </ul>
     </section>
 
@@ -215,33 +232,15 @@
       <div>
         <h2 class="section-title">교육 / 수상</h2>
         <ul class="compact-list">
-          <li><strong>세종대학교 데이터사이언스학과</strong> 졸업 <span>2019 - 2025.08</span></li>
-          <li><strong>네이버 커넥트재단 부스트캠프 AI Tech 8기</strong> 수료 <span>2025.09 - 2026.02</span></li>
+          <li><strong>세종대학교 데이터사이언스학과</strong> 졸업 <span>2019 - 2025.08 · 전체 학점 4.08 / 4.5</span></li>
           <li><strong>제19회 세종대학교 창의설계경진대회</strong> 최우수상 수상 <span>2025, Sound_of_Heart</span></li>
+          <li><strong>네이버 커넥트재단 부스트캠프 AI Tech 8기</strong> 수료 <span>2025.09 - 2026.02</span></li>
         </ul>
       </div>
     </section>
 
     <section class="section">
       <h2 class="section-title">프로젝트 경험</h2>
-
-      <article class="entry">
-        <div class="entry-side">
-          <strong>fcoach</strong>
-          개인 프로젝트
-          <span>데이터 기반 코칭 서비스</span>
-          <span class="tag">FastAPI · Next.js</span>
-          <span class="link-row"><a href="https://fcoach.fun">서비스 링크</a> · <a href="https://github.com/minzai0116/fcoach">GitHub 링크</a></span>
-        </div>
-        <div class="entry-main">
-          <p>FC Online 경기 데이터를 분석해 플레이 문제를 진단하고, 개선 액션과 검증 지표를 제안하는 서비스</p>
-          <ul>
-            <li>Nexon Open API와 FC Online DataCenter를 활용해 경기 데이터 수집 흐름 구성</li>
-            <li>최근 5·10·30경기 단위 KPI를 설계하고 플레이 패턴 진단 로직 구현</li>
-            <li>FastAPI 분석 API와 Next.js 웹 화면을 구현하고 Vercel 배포까지 수행</li>
-          </ul>
-        </div>
-      </article>
 
       <article class="entry">
         <div class="entry-side">
@@ -252,11 +251,11 @@
           <span class="link-row"><a href="https://ait8networkingday.oopy.io/302f145d-e995-815d-bc1f-c0d59f0ff9f6">소개 링크</a> · <a href="https://github.com/minzai0116/pro-recsys-finalproject-recsys-06">GitHub 링크</a></span>
         </div>
         <div class="entry-main">
-          <p>LLM, 벡터 검색, ML 리랭킹을 결합해 자연어 의도를 반영하는 상품 추천 시스템</p>
+          <p>대규모 전자제품 리뷰/메타데이터에서 자연어 의도 해석, 후보 검색, ML 리랭킹, 설명 생성을 분리한 추천 시스템</p>
           <ul>
-            <li>Amazon Reviews'23 Electronics 리뷰 9,263,526건, 메타데이터 193,396개 기반 EDA 수행</li>
-            <li>사용자 요청을 검색 가능한 조건으로 정리하는 프롬프트 흐름과 추천 파이프라인 설계</li>
-            <li>의도 해석, 검색 공간 축소, 후보 검색, 리랭킹, 설명 생성을 분리한 구조 제안</li>
+            <li>Amazon Reviews'23 Electronics 리뷰 9,263,526건, 메타데이터 193,396개 기반 EDA와 데이터 구조 파악</li>
+            <li>Dual-LLM Filtering, Two-Tower Retrieval, ML Reranker로 검색 공간 축소 → 후보 생성 → 리랭킹 흐름 설계</li>
+            <li>사용자 요청을 검색 가능한 조건으로 정리하고 추천 결과 설명까지 이어지는 파이프라인 구조 설계</li>
           </ul>
         </div>
       </article>
@@ -274,7 +273,25 @@
           <ul>
             <li>메타데이터 EDA, 계절/시간대/장르 비율 기반 피처 엔지니어링 수행</li>
             <li>EASE, Multi-VAE 후보 생성과 CatBoost Ranker 리랭킹을 결합한 2-Stage 구조 설계</li>
-            <li>Valid Recall@10 0.2012, Public LB 0.1670 달성</li>
+            <li>오프라인 검증 지표와 리더보드 지표를 함께 확인하며 Valid Recall@10 0.2012, Public LB 0.1670 달성</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="entry">
+        <div class="entry-side">
+          <strong>fcoach</strong>
+          개인 프로젝트
+          <span>데이터 기반 코칭 서비스</span>
+          <span class="tag">FastAPI · Next.js</span>
+          <span class="link-row"><a href="https://fcoach.fun">서비스 링크</a> · <a href="https://github.com/minzai0116/fcoach">GitHub 링크</a></span>
+        </div>
+        <div class="entry-main">
+          <p>FC Online 경기 데이터를 분석해 플레이 문제를 진단하고, 개선 액션과 검증 지표를 제안하는 서비스</p>
+          <ul>
+            <li>Nexon Open API와 FC Online DataCenter를 활용해 경기 데이터 수집 및 정규화 흐름 구성</li>
+            <li>최근 5·10·30경기 단위 KPI를 설계하고 플레이 패턴 진단 로직 구현</li>
+            <li>FastAPI 분석 API와 Next.js 웹 화면을 구현하고 Vercel 배포까지 수행</li>
           </ul>
         </div>
       </article>
@@ -296,25 +313,6 @@
           </ul>
         </div>
       </article>
-    </section>
-
-    <section class="section two-column">
-      <div>
-        <h2 class="section-title">추가 데이터/DB 프로젝트</h2>
-        <ul class="compact-list">
-          <li><strong>Book Rating Prediction</strong> EDA, CatBoost baseline 전처리, 카테고리/지역 기반 피처 엔지니어링</li>
-          <li><strong>서울 지하철 접근성 DB</strong> 공공데이터 통합, ERD 설계, SQL 질의 예시 구성</li>
-        </ul>
-      </div>
-      <div>
-        <h2 class="section-title">Kaggle 실습 프로젝트</h2>
-        <ul class="compact-list">
-          <li><strong>Kobe Bryant Shot Selection</strong> 거리·각도 피처 설계, K-Fold/OOF 검증 기반 이진 분류</li>
-          <li><strong>House Prices</strong> 결측치 처리, log1p 변환, 원-핫 인코딩, 트리 기반 회귀</li>
-          <li><strong>Digit Recognizer</strong> CNN, BatchNormalization, Dropout, EarlyStopping 기반 이미지 분류</li>
-          <li><strong>Store Sales</strong> 날짜 파생 변수, 외부 데이터 결합, LightGBM 기반 시계열 예측</li>
-        </ul>
-      </div>
     </section>
 
   </main>
