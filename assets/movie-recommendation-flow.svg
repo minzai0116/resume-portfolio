@@ -13,7 +13,7 @@
   </defs>
   <rect width="1200" height="620" rx="34" fill="url(#bg)"/>
   <text x="70" y="78" font-family="Arial, sans-serif" font-size="34" font-weight="700" fill="#15202b">Movie Recommendation 2-Stage Pipeline</text>
-  <text x="70" y="116" font-family="Arial, sans-serif" font-size="20" fill="#5f6d7c">MovieLens 기반 후보 생성과 리랭킹을 분리해 Top-K 추천 성능을 개선</text>
+  <text x="70" y="116" font-family="Arial, sans-serif" font-size="20" fill="#5f6d7c">Separate candidate generation and re-ranking to improve Top-K recommendation quality</text>
 
   <g filter="url(#shadow)">
     <rect x="70" y="180" width="210" height="150" rx="24" fill="#ffffff" stroke="#d8dee8"/>
@@ -52,6 +52,6 @@
     <text x="220" y="462" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#15202b">Result</text>
     <text x="350" y="462" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#123d68">Valid Recall@10 0.2012</text>
     <text x="670" y="462" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#123d68">Public LB 0.1670</text>
-    <text x="220" y="500" font-family="Arial, sans-serif" font-size="18" fill="#5f6d7c">유저당 후보군 생성 후 약 40개 피처로 최종 추천 목록을 선정</text>
+    <text x="220" y="500" font-family="Arial, sans-serif" font-size="18" fill="#5f6d7c">Generate 200 candidates per user and re-rank them with about 40 features</text>
   </g>
 </svg>
