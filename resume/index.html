@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>김민재_이력서</title>
+  <title>김민재 | 주니어 AI 엔지니어 이력서</title>
   <style>
     :root {
       --text: #17212b;
@@ -37,7 +37,7 @@
       border-bottom: 3px solid var(--accent);
     }
     .identity {
-      align-self: end;
+      align-self: center;
     }
     h1, h2, h3, p { margin: 0; }
     a {
@@ -71,7 +71,6 @@
       font-size: 9.9px;
       color: var(--muted);
       text-align: right;
-      padding-top: 13mm;
     }
     .contact strong {
       color: var(--text);
@@ -103,13 +102,13 @@
     }
     li {
       margin: 0.75mm 0;
-      font-size: 10.3px;
+      font-size: 11.5px;
     }
     .skill-grid {
       display: grid;
       grid-template-columns: 22mm 1fr;
       gap: 1.4mm 3.5mm;
-      font-size: 10.2px;
+      font-size: 11px;
     }
     .skill-grid .label {
       color: var(--accent);
@@ -117,6 +116,7 @@
     }
     .skill-grid .value {
       color: var(--text);
+      word-break: keep-all;
     }
     .entry {
       display: grid;
@@ -147,7 +147,7 @@
       font-weight: 700;
     }
     .entry-main p {
-      font-size: 10.3px;
+      font-size: 11.5px;
       color: var(--muted);
       margin-bottom: 1mm;
     }
@@ -168,6 +168,20 @@
     .compact-list li {
       margin: 0.8mm 0;
     }
+    @media screen and (max-width: 850px) {
+      .page { width: calc(100% - 24px); min-height: 0; margin: 12px auto; padding: 24px; }
+      .header { grid-template-columns: minmax(0, 1fr) minmax(0, 250px); }
+      .contact a { white-space: normal; overflow-wrap: anywhere; }
+      .summary, .entry-main p, li { font-size: 13px; }
+      .contact, .skill-grid, .entry-side { font-size: 12px; }
+      .entry-side .link-row { font-size: 11px; }
+    }
+    @media screen and (max-width: 600px) {
+      .page { padding: 20px 16px; }
+      .header, .entry, .two-column { grid-template-columns: minmax(0, 1fr); gap: 12px; }
+      .contact { text-align: left; }
+      .entry { padding: 12px 0; }
+    }
     @page { size: A4; margin: 0; }
     @media print {
       body { background: #fff; }
@@ -184,9 +198,9 @@
   <main class="page">
     <header class="header">
       <div class="identity">
-        <p class="name-meta">Data Analyst | Product Analytics · Machine Learning</p>
+        <p class="name-meta">주니어 AI 엔지니어 | LLM · 검색 · 추천</p>
         <h1 class="name">김민재</h1>
-        <p class="summary">데이터로 사람을 이해하고, 발견한 가능성을 서비스로 연결합니다.</p>
+        <p class="summary">사용자의 요구를 검색과 추천으로 연결하는 흐름을 설계했습니다. 팀 프로젝트에서 추천 품질을 비교하고, 개인 서비스를 직접 구축해 운영했습니다.</p>
       </div>
       <div class="contact">
         <div><strong>Email</strong> abcda2@naver.com</div>
@@ -200,34 +214,10 @@
     <section class="section">
       <h2 class="section-title">핵심 역량</h2>
       <ul class="compact-list">
-        <li>SQLite와 Redis로 기능별 이용·오류 건수와 고유 브라우저 수를 집계했습니다.</li>
-        <li>경기·리뷰·메타데이터를 분석해 KPI와 피처를 정의하고 개선안 적용 전·후 및 Recall@K로 결과를 검증했습니다.</li>
-        <li>분석·추천 로직을 FastAPI, Next.js 기반 API/웹 서비스로 연결하고 배포까지 수행했습니다.</li>
+        <li><strong>LLM·검색 설계</strong> 사용자 요청의 정보가 부족하면 추가 질문을 하고, 조건이 모이면 영문 검색어와 품목 필터를 생성하는 흐름을 설계했습니다.</li>
+        <li><strong>추천 피처 설계·평가</strong> 시청 이력에서 장르·인기도 피처를 구성했습니다. 팀은 피처 제거와 재정렬 전후 실험으로 추천 품질을 비교했습니다.</li>
+        <li><strong>API 구현·운영</strong> FastAPI와 Next.js로 경기 분석 서비스를 구축·배포하고, Redis 캐시를 재사용해 중복 조회를 줄였습니다.</li>
       </ul>
-    </section>
-
-    <section class="section two-column">
-      <div>
-        <h2 class="section-title">기술 스택</h2>
-        <div class="skill-grid">
-          <div class="label">분석</div>
-          <div class="value">Python, SQL, Pandas, NumPy, Matplotlib, Seaborn</div>
-          <div class="label">ML/추천</div>
-          <div class="value">Scikit-learn, PyTorch, CatBoost, LightGBM, RecBole</div>
-          <div class="label">서비스</div>
-          <div class="value">FastAPI, Next.js, React, SQLite, PostgreSQL, Redis</div>
-          <div class="label">협업/배포</div>
-          <div class="value">Git, GitHub Actions, Docker, Vercel</div>
-        </div>
-      </div>
-      <div>
-        <h2 class="section-title">교육 / 수상</h2>
-        <ul class="compact-list">
-          <li><strong>세종대학교 데이터사이언스학과</strong> 졸업 <span>2019 - 2025.08 · 전체 학점 4.09 / 4.5</span></li>
-          <li><strong>제19회 세종대학교 창의설계경진대회</strong> 최우수상 수상 <span>2025, Sound_of_Heart</span></li>
-          <li><strong>네이버 커넥트재단 부스트캠프 AI Tech 8기</strong> 수료 <span>2025.09 - 2026.02</span></li>
-        </ul>
-      </div>
     </section>
 
     <section class="section">
@@ -235,18 +225,54 @@
 
       <article class="entry">
         <div class="entry-side">
-          <strong>fcoach</strong>
+          <strong>RMSE</strong>
+          2026.01 - 2026.02
+          <span>부스트캠프 최종 · 5인 팀</span>
+          <span class="tag">HCX-005 · GPT-4o mini</span>
+          <span class="link-row"><a href="https://github.com/minzai0116/pro-recsys-finalproject-recsys-06/tree/develop/service">서비스 코드</a> · <a href="https://youtu.be/SAFLFog-qMg">발표 영상</a></span>
+        </div>
+        <div class="entry-main">
+          <p>사용자의 한국어 대화를 상품 검색과 추천 설명으로 연결하는 전자제품 추천 시스템</p>
+          <ul>
+            <li>구매 조건이 부족할 때 추가 질문하고, 두 LLM으로 영문 검색어·품목 필터를 생성하는 흐름 설계</li>
+            <li>검색어를 Two-Tower 벡터 검색에, 품목명을 SQL 필터에 연결하고 CatBoost로 재정렬하는 구조 설계</li>
+            <li>일부 상품 키워드를 가린 쿼리로 팀 후보 검색 모델 비교(Recall@5 0.033 → 0.520)</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="entry">
+        <div class="entry-side">
+          <strong>Sound_of_Heart</strong>
+          2025.03 - 2025.06
+          <span>캡스톤 · 5인 팀</span>
+          <span class="tag">React · GPT-4o mini</span>
+          <span class="link-row"><a href="https://github.com/minzai0116/Sound_of_Heart">GitHub 링크</a> · 2025 최우수상</span>
+        </div>
+        <div class="entry-main">
+          <p>사용자 상황에 맞춰 상담 전략을 고르는 챗봇과 익명 커뮤니티</p>
+          <ul>
+            <li>PM으로 초기 대화에서 상황을 파악한 뒤 상담 전략을 선택하는 흐름과 프롬프트 요구사항을 설계</li>
+            <li>React로 대화 세션을 이어갈 수 있는 챗봇 화면과 익명 커뮤니티 화면 구현</li>
+            <li>팀 평가에서 GPT-4o mini 단독 대비 세션별 전략 유지 방식의 CTRS 평균 3.74 → 4.46점(6점 만점)</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="entry">
+        <div class="entry-side">
+          <strong>FCOACH</strong>
           2026.03 - 현재
           <span>개인 프로젝트 · 운영 중</span>
           <span class="tag">Python · SQL · FastAPI</span>
           <span class="link-row"><a href="https://fcoach.fun">서비스 링크</a> · <a href="https://github.com/minzai0116/fcoach">GitHub 링크</a></span>
         </div>
         <div class="entry-main">
-          <p>Nexon Open API 기반 FC Online 경기 데이터를 분석해 문제 진단, 개선 방법, 전후 비교까지 연결한 운영 서비스</p>
+          <p>FC Online 경기 기록에서 플레이 습관과 개선 방향을 보여주는 개인 운영 서비스</p>
           <ul>
-            <li>경기 데이터를 정규화하고 최근 5·10·30경기 KPI 스냅샷과 진단 대시보드 설계</li>
-            <li>SQLite SQL과 Redis로 이벤트를 집계하고, 같은 기간에 검색과 분석을 모두 이용한 브라우저 수를 확인할 수 있도록 구현</li>
-            <li>개선안 적용 전·후 KPI 비교를 API/웹 화면으로 연결하고 Vercel 배포까지 수행</li>
+            <li>경기 데이터 수집·정규화, FastAPI 분석 API와 Next.js 화면 구현, Vercel 배포·운영을 직접 수행</li>
+            <li>기존 57경기를 캐시한 테스트에서 동일한 59경기를 구성하면서 상세 API 호출을 59회에서 2회로 줄임</li>
+            <li>SQLite와 Redis로 기능별 이용·오류 건수와 같은 기간에 검색과 분석을 모두 이용한 브라우저 수를 집계</li>
           </ul>
         </div>
       </article>
@@ -260,50 +286,40 @@
           <span class="link-row"><a href="https://github.com/minzai0116/pro-recsys-movierecommendation-recsys-06">GitHub 링크</a></span>
         </div>
         <div class="entry-main">
-          <p>MovieLens 시청 이력과 메타데이터를 분석해 후보 생성·리랭킹으로 연결한 Top-K 추천 시스템</p>
+          <p>시청 이력으로 다음 영화와 가려진 기록을 예측하는 2단계 추천 시스템</p>
           <ul>
-            <li>메타데이터 EDA를 바탕으로 영화 인기도·랭킹과 장르 정보를 리랭킹 피처로 구성</li>
-            <li>EASE 중심 후보 생성과 CatBoost Ranker를 결합한 2-Stage 구조 설계</li>
-            <li>팀 기준 Valid Recall@10 0.2012, Public LB 0.1670 달성</li>
+            <li>메타데이터와 시청 이력을 분석해 장르·인기도 피처를 구성하고 CatBoost 재정렬에 반영</li>
+            <li>EASE와 Multi-VAE 후보 생성에 CatBoost 재정렬을 더하는 2단계 구조 설계</li>
+            <li>팀 공개 리더보드에서 재정렬 추가 전후 Recall@10 0.1620 → 0.1670</li>
           </ul>
         </div>
       </article>
+    </section>
 
-      <article class="entry">
-        <div class="entry-side">
-          <strong>RMSE</strong>
-          2026.01 - 2026.02
-          <span>부스트캠프 최종 · 5인 팀</span>
-          <span class="tag">Retrieval · Reranking · LLM</span>
-          <span class="link-row"><a href="https://github.com/minzai0116/pro-recsys-finalproject-recsys-06/tree/develop/service">서비스 코드</a> · <a href="https://youtu.be/SAFLFog-qMg">발표 영상</a></span>
+    <section class="section two-column">
+      <div>
+        <h2 class="section-title">기술 스택</h2>
+        <div class="skill-grid">
+          <div class="label">LLM/검색</div>
+          <div class="value">HyperCLOVA X (HCX-005), GPT-4o mini, 프롬프트 설계, 벡터 검색, RAG</div>
+          <div class="label">ML/추천</div>
+          <div class="value">Python, PyTorch, CatBoost, RecBole, scikit-learn</div>
+          <div class="label">데이터</div>
+          <div class="value">SQL, Pandas, PostgreSQL, SQLite, Redis</div>
+          <div class="label">서비스</div>
+          <div class="value">FastAPI, Next.js, React</div>
+          <div class="label">협업/배포</div>
+          <div class="value">Git, GitHub Actions, Docker, Vercel</div>
         </div>
-        <div class="entry-main">
-          <p>대규모 전자제품 리뷰/메타데이터에서 자연어 의도 해석, 후보 검색, ML 리랭킹, 설명 생성을 분리한 추천 시스템</p>
-          <ul>
-            <li>Amazon Reviews'23 Electronics 리뷰 9,263,526건, 메타데이터 193,396개 기반 EDA와 데이터 구조 파악</li>
-            <li>대화 맥락과 시스템 액션을 연결하는 RAG·추천 파이프라인 구조 설계</li>
-            <li>의도 분석, 스펙 대조, 추천 사유 생성으로 이어지는 프롬프트 흐름 설계</li>
-          </ul>
-        </div>
-      </article>
-
-      <article class="entry">
-        <div class="entry-side">
-          <strong>Sound_of_Heart</strong>
-          2025.03 - 2025.06
-          <span>캡스톤 · 5인 팀</span>
-          <span class="tag">React · GPT API</span>
-          <span class="link-row"><a href="https://github.com/minzai0116/Sound_of_Heart">GitHub 링크</a> · 2025 최우수상</span>
-        </div>
-        <div class="entry-main">
-          <p>정서적 어려움을 겪는 사용자를 위한 GPT 기반 상담형 챗봇과 커뮤니티 멘탈케어 서비스</p>
-          <ul>
-            <li>PM / 프론트엔드 역할로 서비스 흐름을 정리하고 주요 화면 구현에 참여</li>
-            <li>CBT, ACT, DBT 관점을 반영해 감정 탐색과 행동 제안으로 이어지는 흐름 정리</li>
-            <li>상담 전략 비교를 위한 A/B Test와 CTRS 기반 평가 구조를 팀 차원에서 설계</li>
-          </ul>
-        </div>
-      </article>
+      </div>
+      <div>
+        <h2 class="section-title">교육 / 수상</h2>
+        <ul class="compact-list">
+          <li><strong>세종대학교 데이터사이언스학과</strong> 졸업 <span>2019 - 2025.08 · 전체 학점 4.09 / 4.5</span></li>
+          <li><strong>제19회 세종대학교 창의설계경진대회</strong> 최우수상 수상 <span>2025, Sound_of_Heart</span></li>
+          <li><strong>네이버 커넥트재단 부스트캠프 AI Tech 8기</strong> 수료 <span>2025.09 - 2026.02</span></li>
+        </ul>
+      </div>
     </section>
 
   </main>
