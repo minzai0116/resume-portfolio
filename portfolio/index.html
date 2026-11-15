@@ -874,6 +874,13 @@
     #more .supplemental-body > p { color:var(--text); margin-bottom:2mm; }
     #more .subway-card { grid-column:1 / -1; grid-template-columns:47mm minmax(0,1fr); }
     .eda-figure img { height:48mm; background:white; }
+    .transport-figure figcaption { margin:0 0 6px; }
+    .transport-rates { display:grid; gap:8px; margin:0 0 7px; font-size:11px; }
+    .transport-rates > div { display:grid; grid-template-columns:minmax(0,1fr) auto; gap:3px 8px; align-items:center; }
+    .transport-rates dd { margin:0; color:var(--accent); font-weight:700; font-variant-numeric:tabular-nums; }
+    .transport-track { grid-column:1 / -1; grid-row:2; height:7px; border-radius:4px; background:var(--accent-soft); overflow:hidden; }
+    .transport-track span { display:block; width:var(--share); height:100%; background:var(--accent); }
+    .transport-figure p { font-size:10px; color:var(--muted); }
     .supplemental-result { margin-top:8px; padding:8px 10px; border:1px solid var(--line); border-radius:8px; background:var(--accent-soft); }
     .supplemental-result h4 { margin:0 0 4px; font-size:11px; }
     .supplemental-result p { margin:0; font-size:10.5px; line-height:1.55; }
@@ -1397,18 +1404,27 @@
         </div>
       </div>
     </article>
-      <article class="supplemental-card">
-      <div class="supplemental-side"><h3>Store Sales</h3><p class="supplemental-type">구분 · 시계열 예측 수업 실습<br>기간 · 2024.11<br>진행 · Kaggle Store Sales 데이터</p></div>
+      <article class="supplemental-card" id="spaceship-titanic">
+      <div class="supplemental-side"><h3>Spaceship Titanic</h3><p class="supplemental-type">구분 · 승객 이송 여부 예측 개인 과제<br>기간 · 2024.10<br>진행 · 세종대학교 인공지능 수업 · <a class="text-link" href="https://www.kaggle.com/competitions/spaceship-titanic/overview" target="_blank" rel="noopener noreferrer">Kaggle 데이터 ↗</a></p></div>
       <div class="supplemental-body">
-        <p>토·일 평균 판매량이 평일보다 높아 요일과 주말 여부를 피처로 만들었습니다. 두 피처를 함께 추가했을 때의 효과를 다시 확인했습니다.</p>
-        <figure class="review-figure eda-figure">
-          <a href="../assets/store-sales-weekday-eda.png" target="_blank" rel="noopener noreferrer"><img src="../assets/store-sales-weekday-eda.png" alt="평일보다 토요일과 일요일의 평균 판매량이 높은 요일별 막대그래프"></a>
-          <figcaption><strong>요일별 평균 판매량</strong> 2024년 실습의 탐색 결과입니다. <a class="text-link" href="https://github.com/minzai0116/kaggle-practice/blob/main/store-sales-forecasting/notebooks/store_sales.ipynb" target="_blank" rel="noopener noreferrer">실습 노트북 ↗</a></figcaption>
+        <p>5개 서비스의 지출 기록을 합산했습니다. 합계가 0인 그룹에서 이송 비율이 높아, 총지출액과 지출 여부(<code>ZeroSpend</code>)를 피처로 구성했습니다.</p>
+        <figure class="review-figure transport-figure">
+          <figcaption><strong>지출 기록에 따른 이송 비율</strong></figcaption>
+          <dl class="transport-rates">
+            <div><dt>지출 합계 0 · 3,653명</dt><dd>78.6%</dd><dd class="transport-track" aria-hidden="true"><span style="--share:78.6%"></span></dd></div>
+            <div><dt>지출 합계 양수 · 5,040명</dt><dd>29.9%</dd><dd class="transport-track" aria-hidden="true"><span style="--share:29.9%"></span></dd></div>
+          </dl>
+          <p>학습 데이터 8,693명 기준. 비어 있는 지출 항목은 합계에서 제외했습니다.</p>
         </figure>
         <div class="supplemental-result">
-          <h4>요일·주말 피처 추가 전후 · 후속 검증</h4>
-          <p class="result-score">평균 RMSLE <strong>0.5270 → 0.5102</strong></p>
-          <p>과거 90일로 학습한 Random Forest로 다음 16일을 예측했습니다. 2017년 검증 구간 3개 모두에서 오차가 줄었고, 평균 3.2% 감소했습니다.</p>
+          <h4>개인 과제 · 모델 비교와 수업 발표</h4>
+          <p class="result-score">CatBoost 10분할 내부 정확도 <strong>80.77%</strong></p>
+          <p>XGBoost 80.71%, LightGBM 80.54%를 기록했습니다. 세 모델의 다수결 예측을 생성하고 분석 과정과 결과를 수업에서 발표했습니다.</p>
+        </div>
+        <div class="supplemental-result">
+          <h4>지출 피처 묶음 추가 전후 · 후속 검증</h4>
+          <p class="result-score">정확도 <strong>79.91% → 80.44%</strong></p>
+          <p>승객 그룹 기준 5분할로 검증했습니다. 같은 HistGradientBoosting 모델의 입력에 총지출액과 <code>ZeroSpend</code>를 함께 추가했습니다.</p>
         </div>
       </div>
     </article>
